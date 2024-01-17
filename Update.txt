@@ -1,0 +1,9 @@
+Update from tuesdays demo
+1. We managed to get the floating point mac unit design working.
+2. We further parallelized this model by adding 8 MAC units that would run in parallel. 
+   The issue with this implementation was that we ran out of LUTs while implementation.
+   Hence we disabled output registers of 6 MAC units. This does not affect the correctness or runtime of of the 
+   PL, we just saved some LUTs for testing purposes. We were able to test runtimes of our implementation and we checked the
+   correctness of MAC units by setting all values to 1.0 and checking whether we get 512 as o/p. We could not test the correctness 
+   of the implementation with actual data as we had difficulty extracting the output of LSTM from pytorch within the deadline (We had troble
+   decoupling LSTM layer from the FCN layer).
